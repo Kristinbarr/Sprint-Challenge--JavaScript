@@ -29,14 +29,21 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+  `.map` returns a new array and `.forEach` does not, it's mutative. `.forEach` doesn't need to return any values, it's mainly iterative and can perform a function on every element. `.map` needs the callback function to return a value to be added to the new array it returns.
 
 2. What is the difference between a function and a method?
+  A method is a property that is a function on a specific object or class. Methods are referenced by dot notation and have the scope of their parent object. A function has the scope independent of that specific object, most likely the global object's scope.
 
 3. What is closure?
+  Closure is a 'closed-over' variable environment. It's the ability for a function to keep access to the lexical scope (and other variables) where it was defined in and can be invoked outside of that scope.
 
 4. Describe the four rules of the 'this' keyword.
-
+  1. Explicit - The contextual reference is directly set by the keywords: `.call`, `.apply`, `.bind`.
+  2. Implicit - An invoked method's contexual reference is the parent object (right side of the '.')
+  3. `new` keyword - When the `new` keyword creates a new instance, it has the contextual reference of itself.
+  4. window - If no keyword or implicit binding is dictated, the contextual reference will be the global window object.
 5. Why do we need super() in an extended class?
+  The  `super()` keyword in ES6 allows the inheritance of the properties, prototype methods and bindings from a parent to a child class. The class syntax must have both `extends` and `super()` to inherit from the parent.
 
 ## Project Set up
 
@@ -65,11 +72,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
